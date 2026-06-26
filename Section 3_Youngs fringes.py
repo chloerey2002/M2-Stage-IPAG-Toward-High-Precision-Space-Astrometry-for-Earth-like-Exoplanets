@@ -158,7 +158,7 @@ plt.imshow(err_if, origin='lower', cmap='viridis', extent = extent)
 plt.colorbar(label='Number of pixels')
 
 
-err_alpha = alpha(dL_hyp, lmd, x, y) - alpha(dL_st, lmd, x, y)                                #Difference of local angle between the two models
+err_alpha = alpha(dL_hyp, lmd, x, y) - alpha(dL_st, lmd, x, y)             #Difference of local angle between the two models
 
 plt.figure()
 plt.title('Alpha Error')

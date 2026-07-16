@@ -14,7 +14,7 @@ def grid(npix, N, pix_size):
     pitch = pix_size * fac
     c = npix_arr * pitch
 
-    return c, pitch
+    return c, pitch, fac
 
 
 def straight(x, B, D, lmd):

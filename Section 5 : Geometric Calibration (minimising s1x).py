@@ -25,8 +25,8 @@ Nx = 800
 npixy =5000
 Ny = 500
 
-x, pitch = grid(npixx, Nx, pix_size)
-y, pitch = grid(npixy, Ny, pix_size)
+x, pitch, facx = grid(npixx, Nx, pix_size)
+y, pitch, facy = grid(npixy, Ny, pix_size)
 
 xx, yy = np.meshgrid(x, y)
 

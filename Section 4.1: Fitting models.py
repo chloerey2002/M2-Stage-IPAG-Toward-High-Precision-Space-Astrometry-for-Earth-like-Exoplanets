@@ -22,8 +22,8 @@ npixy = 5000
 Ny = 250
 
 # Unpack the coordinate arrays and pitches
-x_coords, pitch_x = grid(npixx, Nx, pix_size)
-y_coords, pitch_y = grid(npixy, Ny, pix_size)
+x_coords, pitch_x, facx = grid(npixx, Nx, pix_size)
+y_coords, pitch_y, facy = grid(npixy, Ny, pix_size)
 
 # Create 2D coordinate grid
 xx, yy = np.meshgrid(x_coords, y_coords)

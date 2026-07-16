@@ -230,7 +230,7 @@ def fit_local_sine(signal_1d, col0, a_pix, kind):
     return col_sub
 
 
-def build_subpix_fringe_coords(fringe_coords, I, a_pix, kind=kind):
+def build_subpix_fringe_coords(fringe_coords, I, a_pix, kind):
     """
     Converts your labelled integer-pixel fringe coordinates into sub-pixel coordinates.
 

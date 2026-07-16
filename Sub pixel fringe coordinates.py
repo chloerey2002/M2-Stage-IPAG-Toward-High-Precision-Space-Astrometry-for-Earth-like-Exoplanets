@@ -105,7 +105,7 @@ plt.imshow(hyp_int, cmap='viridis', origin='lower', extent = extent)
 plt.colorbar(label='Intensity')
 
 #%% labelling fringes-------------------------------------------------------------------------------------------
-kind = "bright"
+kind = "dark"
 
 if kind == "dark":
     fringe_mask = dark_hyp

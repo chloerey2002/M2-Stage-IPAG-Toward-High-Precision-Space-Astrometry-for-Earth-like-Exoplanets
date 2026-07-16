@@ -114,8 +114,8 @@ def label_fringe_mask(fringe_mask, min_size=20):
     min_size :   the minimum # of connected pixels needed to be considered an object ie a fringe
     """
     structure = np.ones((3, 3), dtype=int)                               #def conected, all pixels in a 3x3 block are conected
-    labelled, n_labels = ndimage.label(fringe_mask, structure=structure) #ndimage labels defined objects with k indicies now stored in labelled
-                                                                         #n_labels is the number connected components
+    labelled, n_labels = ndimage.label(fringe_mask, structure)           #ndimage labels defined objects with k indicies now stored in labelled
+                                                                         #n_labels - number connected components
     components = []
 
     for lab in range(1, n_labels + 1):                                   #range starts from 1 to number of connected components

@@ -105,6 +105,12 @@ plt.imshow(hyp_int, cmap='viridis', origin='lower', extent = extent)
 plt.colorbar(label='Intensity')
 
 #%% labelling fringes-------------------------------------------------------------------------------------------
+kind = "bright"
+
+if kind == "dark":
+    fringe_mask = dark_hyp
+elif kind == "bright":
+    fringe_mask = bright_hyp
 
 def label_fringe_mask(fringe_mask, min_size=20):
     """
@@ -136,7 +142,7 @@ def label_fringe_mask(fringe_mask, min_size=20):
     return fringe_coords
 
 
-fringe_coords = label_fringe_mask(dark_hyp)
+fringe_coords = label_fringe_mask(fringe_mask)
 print("# of bright/dark fringes:", len(fringe_coords))
 
 
@@ -164,7 +170,6 @@ print("Interfringe in real pix:", interfringe_pix)
 print("Interfringe in sampled pix:", a_pix_sampled)
 
 
-kind = "dark"
 def fit_local_sine(signal_1d, col0, a_pix, kind):
     """
     Fits a local sinusoid around an approx fringe position and returns

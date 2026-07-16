@@ -18,8 +18,8 @@ Nx = 800                                            #number of sampling points i
 npixy =5000                                         #number pixels in y
 Ny = 500                                            #number of sampling points in y
 
-x, pitch = grid(npixx, Nx, pix_size)                #x coords
-y, pitch = grid(npixy, Ny, pix_size)                #y coords
+x, pitch, facx = grid(npixx, Nx, pix_size)                #x coords
+y, pitch, facy = grid(npixy, Ny, pix_size)                #y coords
 
 xx, yy = np.meshgrid(x, y)  
 
